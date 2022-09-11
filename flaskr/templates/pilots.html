@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'sort_buttons.html' %}
+<p>
+<table style="width:40%" class="center">
+    <tr>
+        <th style="width:10%">Code</th>
+        <th style="width:30%">Pilot</th>
+        <th style="width:50%">Car</th>
+    </tr>
+    {% for value in content %}
+        <tr>
+                <td><a name="order" id="driver_id"
+                       href="?pilot_id={{ value[0] }}">{{ value[0] }}</a></td>
+            <td>{{ value[1] }}</td>
+            <td class="mytd">{{ value[2] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

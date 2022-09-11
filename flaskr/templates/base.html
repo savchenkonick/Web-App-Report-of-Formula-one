@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Report of Monaco 2018 Racing</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <style>
+            body, html {
+                height: 100%;
+                }
+            body {
+                  /* The image used */
+                  background-image: url("{{ url_for('static', filename='css/f1.jpg') }}");
+
+                  /* Full height */
+                  height: 100%;
+
+                  /* Center and scale the image nicely */
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                 }
+        </style>
+    </head>
+<body>
+
+{% include 'navbar.html' %}
+<h1>Monaco 2018 Q1 report</h1>
+{% block content %}
+{% endblock %}
+</body>
+
+</html>
