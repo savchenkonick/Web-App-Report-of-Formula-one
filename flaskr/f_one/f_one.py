@@ -205,35 +205,9 @@ def pars_args(dir_path):
     print_report(q1_report, reverse=desc_order, driver_name=driver_name)
 
 
-def parse_to_db():
-    db = SqliteDatabase('f1.db')
-
-    class Driver(Model):
-        name = CharField()
-        car = DateField()
-
-        class Meta:
-            database = db
-
-    class Q1(Model):
-        driver = ForeignKeyField(Driver, backref='Q1')
-        start = DateTimeField()
-        stop = DateTimeField()
-
-        class Meta:
-            database = db
-
-    db.connect()
-    db.create_tables([Driver, Q1])
-    lwh = Driver(name='Hammilton', car='Mercedes')
-    lwh.save()
-    db.close()
-
-
 def main():
-    pass
-    # pars_args('static/data')
-    # parse_to_db()
+    pars_args('static/data')
+
 
 if __name__ == '__main__':
     main()
