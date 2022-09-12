@@ -7,7 +7,7 @@ db = SqliteDatabase('f1.sqlite3', pragmas={'foreign_keys': 1})
 class Driver(Model):
     driver_code = CharField(primary_key=True)
     driver_name = CharField()
-    car = DateField()
+    car = CharField()
 
     class Meta:
         database = db
