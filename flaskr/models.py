@@ -12,8 +12,8 @@ class Driver(Model):
     class Meta:
         database = db
 
+
 class Qualification(Model):
-    # driver_code = ForeignKeyField(Driver, to_field='driver_code', on_delete='CASCADE')
     driver_code = ForeignKeyField(Driver, on_delete='CASCADE')
     start = DateTimeField()
     stop = DateTimeField()
