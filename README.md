@@ -31,6 +31,8 @@ or
 - Flask 2.2.2
 - Flask-RESTful 0.3.9
 - Flasgger 0.9.5
+- SQLite
+- Peewee 3.15.2
 
 ## Requirements
 Available in requirements.txt
